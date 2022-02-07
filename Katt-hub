@@ -500,7 +500,7 @@ local function BTMSKL_fake_script() -- Script.LocalScript
 	local script = Instance.new('LocalScript', Script)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		lloadstring(game:HttpGet('https://raw.githubusercontent.com/topitbopit/rblx/main/hat_lib/example_orbit.lua'))()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/topitbopit/rblx/main/hat_lib/example_orbit.lua'))()
 	end)
 end
 coroutine.wrap(BTMSKL_fake_script)()
