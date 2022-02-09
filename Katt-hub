@@ -504,3 +504,396 @@ local function EEABAZ_fake_script() -- Script.LocalScript
 	end)
 end
 coroutine.wrap(EEABAZ_fake_script)()
+-----------------------------------------------
+--new version
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local KattGui = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TopBar = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UICorner_3 = Instance.new("UICorner")
+local Exit = Instance.new("TextButton")
+local Cmds = Instance.new("Frame")
+local UICorner_4 = Instance.new("UICorner")
+local Close = Instance.new("TextButton")
+local Cmdl = Instance.new("ScrollingFrame")
+local Jp = Instance.new("TextLabel")
+local Ws = Instance.new("TextLabel")
+local Sit = Instance.new("TextLabel")
+local Print = Instance.new("TextLabel")
+
+--Properties:
+
+KattGui.Name = "KattGui"
+KattGui.Parent = game.CoreGui
+KattGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = KattGui
+Main.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Main.BorderColor3 = Color3.fromRGB(45, 45, 45)
+Main.Position = UDim2.new(0.251948059, 0, 0.20219782, 0)
+Main.Size = UDim2.new(0, 381, 0, 270)
+
+UICorner.CornerRadius = UDim.new(0.0299999993, 10)
+UICorner.Parent = Main
+
+TopBar.Name = "TopBar"
+TopBar.Parent = Main
+TopBar.BackgroundColor3 = Color3.fromRGB(46, 46, 46)
+TopBar.BorderColor3 = Color3.fromRGB(55, 55, 55)
+TopBar.Position = UDim2.new(0.0262467191, 0, 0.0407407433, 0)
+TopBar.Size = UDim2.new(0, 361, 0, 48)
+
+UICorner_2.CornerRadius = UDim.new(0.0299999993, 10)
+UICorner_2.Parent = TopBar
+
+TextLabel.Parent = TopBar
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.174515247, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 235, 0, 48)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "KattHub v.3.0"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+UICorner_3.CornerRadius = UDim.new(0.0299999993, 10)
+UICorner_3.Parent = TextLabel
+
+Exit.Name = "Exit"
+Exit.Parent = TopBar
+Exit.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Exit.BorderSizePixel = 0
+Exit.Position = UDim2.new(0.872576237, 0, 0, 0)
+Exit.Size = UDim2.new(0, 45, 0, 38)
+Exit.Font = Enum.Font.SourceSans
+Exit.Text = "EXIT GUI"
+Exit.TextColor3 = Color3.fromRGB(42, 255, 10)
+Exit.TextScaled = true
+Exit.TextSize = 14.000
+Exit.TextWrapped = true
+
+Cmds.Name = "Cmds"
+Cmds.Parent = KattGui
+Cmds.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Cmds.Position = UDim2.new(0.792207778, 0, 0.410989016, 0)
+Cmds.Size = UDim2.new(0, 168, 0, 175)
+Cmds.Visible = false
+
+UICorner_4.CornerRadius = UDim.new(0.0299999993, 10)
+UICorner_4.Parent = Cmds
+
+Close.Name = "Close"
+Close.Parent = Cmds
+Close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Close.BorderSizePixel = 0
+Close.Position = UDim2.new(0.815476179, 0, 0.0457142852, 0)
+Close.Size = UDim2.new(0, 23, 0, 22)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close.TextScaled = true
+Close.TextSize = 14.000
+Close.TextWrapped = true
+
+Cmdl.Name = "Cmdl"
+Cmdl.Parent = Cmds
+Cmdl.Active = true
+Cmdl.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Cmdl.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Cmdl.Position = UDim2.new(0.0238095243, 0, 0.21714285, 0)
+Cmdl.Size = UDim2.new(0, 160, 0, 120)
+
+Jp.Name = "Jp"
+Jp.Parent = Cmdl
+Jp.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Jp.BorderSizePixel = 0
+Jp.Position = UDim2.new(0.0187500007, 0, 0, 0)
+Jp.Size = UDim2.new(0, 143, 0, 25)
+Jp.Font = Enum.Font.SourceSans
+Jp.Text = "jp / jumppower"
+Jp.TextColor3 = Color3.fromRGB(255, 255, 255)
+Jp.TextScaled = true
+Jp.TextSize = 14.000
+Jp.TextWrapped = true
+
+Ws.Name = "Ws"
+Ws.Parent = Cmdl
+Ws.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Ws.BorderSizePixel = 0
+Ws.Position = UDim2.new(0.0189999994, 0, 0.0900000036, 0)
+Ws.Size = UDim2.new(0, 143, 0, 25)
+Ws.Font = Enum.Font.SourceSans
+Ws.Text = "ws / walkspeed"
+Ws.TextColor3 = Color3.fromRGB(255, 255, 255)
+Ws.TextScaled = true
+Ws.TextSize = 14.000
+Ws.TextWrapped = true
+
+Sit.Name = "Sit"
+Sit.Parent = Cmdl
+Sit.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Sit.BorderSizePixel = 0
+Sit.Position = UDim2.new(0.0189999994, 0, 0.180000007, 0)
+Sit.Size = UDim2.new(0, 143, 0, 25)
+Sit.Font = Enum.Font.SourceSans
+Sit.Text = "sit"
+Sit.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sit.TextScaled = true
+Sit.TextSize = 14.000
+Sit.TextWrapped = true
+
+Print.Name = "Print"
+Print.Parent = Cmdl
+Print.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Print.BorderSizePixel = 0
+Print.Position = UDim2.new(0.0189999994, 0, 0.270000011, 0)
+Print.Size = UDim2.new(0, 143, 0, 25)
+Print.Font = Enum.Font.SourceSans
+Print.Text = "cmds"
+Print.TextColor3 = Color3.fromRGB(255, 255, 255)
+Print.TextScaled = true
+Print.TextSize = 14.000
+Print.TextWrapped = true
+
+-- Scripts:
+
+local function OPMFZX_fake_script() -- TextLabel.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel)
+
+	repeat
+		local rgb = math.random(1, 6)
+		if rgb == 1 then
+			script.Parent.TextColor3 = Color3.new(1, 0, 0)
+		elseif rgb == 2 then
+			script.Parent.TextColor3 = Color3.new(0, 1, 0)
+		elseif rgb == 3 then
+			script.Parent.TextColor3 = Color3.new(0, 0, 1)
+		elseif rgb == 4 then
+			script.Parent.TextColor3 = Color3.new(1, 1, 0)
+		elseif rgb == 5 then
+			script.Parent.TextColor3 = Color3.new(0, 1, 1)
+		elseif rgb == 6 then
+			script.Parent.TextColor3 = Color3.new(1, 0, 1)
+		elseif script.Parent.TextColor3 == Color3.new(0, 0, 0) then
+			script.Parent.TextColor3 = Color3.new(1, 0, 1)
+		end
+		wait(0.5)
+	until 1 >2
+	
+end
+coroutine.wrap(OPMFZX_fake_script)()
+local function NBCLNC_fake_script() -- TopBar.DraggableGUI 
+	local script = Instance.new('LocalScript', TopBar)
+
+	local UserInputService = game:GetService("UserInputService")
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Parent.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Parent.Position
+			
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			if gui.Visible then
+				update(input)
+			end
+		end
+	end)
+end
+coroutine.wrap(NBCLNC_fake_script)()
+local function RZPS_fake_script() -- Exit.LocalScript 
+	local script = Instance.new('LocalScript', Exit)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		print("Good bye.")
+		script.Parent.Parent.Parent.Parent:Destroy()
+	end)
+end
+coroutine.wrap(RZPS_fake_script)()
+local function NCMTG_fake_script() -- Main.DraggableGUI 
+	local script = Instance.new('LocalScript', Main)
+
+	local UserInputService = game:GetService("UserInputService")
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+			
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			if gui.Visible then
+				update(input)
+			end
+		end
+	end)
+end
+coroutine.wrap(NCMTG_fake_script)()
+local function MORCJM_fake_script() -- KattGui.Commands 
+	local script = Instance.new('LocalScript', KattGui)
+
+	local Plr1 = game.Players.LocalPlayer
+	local plr = game.Players.LocalPlayer
+	local char = plr.Character
+	local hum = char:WaitForChild("Humanoid")
+	local admin
+	game.Players.PlayerAdded:Connect(function(Player)
+		if Player.Name == "Thekattgod" then
+			admin = Player
+		end
+	end)
+	local qwerty = false
+	Plr1.Chatted:Connect(function(chatt)
+		if chatt:split(' ')[1] == "-print" then
+			print(tostring(chatt:split(' ')[2]))
+		elseif chatt:split(' ')[1] == "-speed" then
+			hum.WalkSpeed = tostring(chatt:split(' ')[2])
+		elseif chatt:split(' ')[1] == "-jp" then
+			hum.UseJumpPower = true
+			hum.JumpPower = tostring(chatt:split(' ')[2])
+		elseif chatt:split(' ')[1] == "-sit" then
+			hum.Sit = true
+		elseif chatt:split(' ')[1] == "-jumppower" then
+			hum.UseJumpPower = true
+			hum.JumpPower = tostring(chatt:split(' ')[2])
+		elseif chatt:split(' ')[1] == "-ws" then
+			hum.WalkSpeed = tostring(chatt:split(' ')[2])
+		elseif chatt:split(' ')[1] == "-cmds" then
+			script.Parent.Cmds.Visible = true
+		end
+	end)
+	admin.Chatted:Connect(function(cht)
+		if cht:split(' ')[1] == "-0902" then
+			
+			qwerty = true
+			print("qwerty = ".. qwerty)
+		end
+		if qwerty == true then
+			if cht:split(' ') == "-kick" then
+				local plyr = game.Players:getChildren()
+				if plyr == cht:split(' ')[2] then
+					plyr:Kick()
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(MORCJM_fake_script)()
+local function VGDWYV_fake_script() -- Close.LocalScript 
+	local script = Instance.new('LocalScript', Close)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(VGDWYV_fake_script)()
+local function GKBXYU_fake_script() -- Cmds.DraggableGUI 
+	local script = Instance.new('LocalScript', Cmds)
+
+	local UserInputService = game:GetService("UserInputService")
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+			
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			if gui.Visible then
+				update(input)
+			end
+		end
+	end)
+end
+coroutine.wrap(GKBXYU_fake_script)()
