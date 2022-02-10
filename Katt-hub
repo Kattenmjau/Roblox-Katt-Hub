@@ -513,14 +513,20 @@ coroutine.wrap(EEABAZ_fake_script)()
 
 local KattGui = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
 local TopBar = Instance.new("Frame")
-local UICorner_2 = Instance.new("UICorner")
+local UICorner = Instance.new("UICorner")
 local TextLabel = Instance.new("TextLabel")
-local UICorner_3 = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
 local Exit = Instance.new("TextButton")
-local Cmds = Instance.new("Frame")
+local Scripts = Instance.new("ScrollingFrame")
+local UICorner_3 = Instance.new("UICorner")
+local Section1 = Instance.new("TextLabel")
+local HatSpin = Instance.new("TextButton")
+local C00lGui = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
+local NetLess = Instance.new("TextButton")
+local Cmds = Instance.new("Frame")
+local UICorner_5 = Instance.new("UICorner")
 local Close = Instance.new("TextButton")
 local Cmdl = Instance.new("ScrollingFrame")
 local Jp = Instance.new("TextLabel")
@@ -541,9 +547,6 @@ Main.BorderColor3 = Color3.fromRGB(45, 45, 45)
 Main.Position = UDim2.new(0.251948059, 0, 0.20219782, 0)
 Main.Size = UDim2.new(0, 381, 0, 270)
 
-UICorner.CornerRadius = UDim.new(0.0299999993, 10)
-UICorner.Parent = Main
-
 TopBar.Name = "TopBar"
 TopBar.Parent = Main
 TopBar.BackgroundColor3 = Color3.fromRGB(46, 46, 46)
@@ -551,8 +554,8 @@ TopBar.BorderColor3 = Color3.fromRGB(55, 55, 55)
 TopBar.Position = UDim2.new(0.0262467191, 0, 0.0407407433, 0)
 TopBar.Size = UDim2.new(0, 361, 0, 48)
 
-UICorner_2.CornerRadius = UDim.new(0.0299999993, 10)
-UICorner_2.Parent = TopBar
+UICorner.CornerRadius = UDim.new(0.0299999993, 10)
+UICorner.Parent = TopBar
 
 TextLabel.Parent = TopBar
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -566,8 +569,8 @@ TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
 TextLabel.TextWrapped = true
 
-UICorner_3.CornerRadius = UDim.new(0.0299999993, 10)
-UICorner_3.Parent = TextLabel
+UICorner_2.CornerRadius = UDim.new(0.0299999993, 10)
+UICorner_2.Parent = TextLabel
 
 Exit.Name = "Exit"
 Exit.Parent = TopBar
@@ -582,6 +585,66 @@ Exit.TextScaled = true
 Exit.TextSize = 14.000
 Exit.TextWrapped = true
 
+Scripts.Name = "Scripts"
+Scripts.Parent = Main
+Scripts.Active = true
+Scripts.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Scripts.Position = UDim2.new(0.0262467191, 0, 0.34074074, 0)
+Scripts.Size = UDim2.new(0, 360, 0, 163)
+
+UICorner_3.CornerRadius = UDim.new(0.0299999993, 10)
+UICorner_3.Parent = Scripts
+
+Section1.Name = "Section1"
+Section1.Parent = Scripts
+Section1.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Section1.Size = UDim2.new(0, 347, 0, 26)
+Section1.Font = Enum.Font.SourceSans
+Section1.Text = "Fe scripts (No specific hats needed)"
+Section1.TextColor3 = Color3.fromRGB(0, 0, 0)
+Section1.TextScaled = true
+Section1.TextSize = 14.000
+Section1.TextWrapped = true
+
+HatSpin.Name = "HatSpin"
+HatSpin.Parent = Scripts
+HatSpin.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+HatSpin.Position = UDim2.new(0.00555555569, 0, 0.0476963818, 0)
+HatSpin.Size = UDim2.new(0, 175, 0, 34)
+HatSpin.Font = Enum.Font.SourceSans
+HatSpin.Text = "Hat spin NL"
+HatSpin.TextColor3 = Color3.fromRGB(0, 0, 0)
+HatSpin.TextScaled = true
+HatSpin.TextSize = 14.000
+HatSpin.TextWrapped = true
+
+C00lGui.Name = "C00lGui"
+C00lGui.Parent = Scripts
+C00lGui.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+C00lGui.Position = UDim2.new(0.477777779, 0, 0.0476963818, 0)
+C00lGui.Size = UDim2.new(0, 175, 0, 34)
+C00lGui.Font = Enum.Font.SourceSans
+C00lGui.Text = "C00lkidd gui"
+C00lGui.TextColor3 = Color3.fromRGB(0, 0, 0)
+C00lGui.TextScaled = true
+C00lGui.TextSize = 14.000
+C00lGui.TextWrapped = true
+
+UICorner_4.CornerRadius = UDim.new(0.0299999993, 10)
+UICorner_4.Parent = Main
+
+NetLess.Name = "NetLess"
+NetLess.Parent = Main
+NetLess.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+NetLess.Position = UDim2.new(0.0314960629, 0, 0.218518525, 0)
+NetLess.Size = UDim2.new(0, 358, 0, 33)
+NetLess.Font = Enum.Font.SourceSans
+NetLess.Text = "Netless (Always use before a script when it has the word \"NL\" in it)"
+NetLess.TextColor3 = Color3.fromRGB(0, 0, 0)
+NetLess.TextScaled = true
+NetLess.TextSize = 14.000
+NetLess.TextWrapped = true
+
 Cmds.Name = "Cmds"
 Cmds.Parent = KattGui
 Cmds.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
@@ -589,8 +652,8 @@ Cmds.Position = UDim2.new(0.792207778, 0, 0.410989016, 0)
 Cmds.Size = UDim2.new(0, 168, 0, 175)
 Cmds.Visible = false
 
-UICorner_4.CornerRadius = UDim.new(0.0299999993, 10)
-UICorner_4.Parent = Cmds
+UICorner_5.CornerRadius = UDim.new(0.0299999993, 10)
+UICorner_5.Parent = Cmds
 
 Close.Name = "Close"
 Close.Parent = Cmds
@@ -667,7 +730,7 @@ Print.TextWrapped = true
 
 -- Scripts:
 
-local function OPMFZX_fake_script() -- TextLabel.LocalScript 
+local function OSGXPV_fake_script() -- TextLabel.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel)
 
 	repeat
@@ -691,8 +754,8 @@ local function OPMFZX_fake_script() -- TextLabel.LocalScript
 	until 1 >2
 	
 end
-coroutine.wrap(OPMFZX_fake_script)()
-local function NBCLNC_fake_script() -- TopBar.DraggableGUI 
+coroutine.wrap(OSGXPV_fake_script)()
+local function LZLHMWY_fake_script() -- TopBar.DraggableGUI 
 	local script = Instance.new('LocalScript', TopBar)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -737,8 +800,8 @@ local function NBCLNC_fake_script() -- TopBar.DraggableGUI
 		end
 	end)
 end
-coroutine.wrap(NBCLNC_fake_script)()
-local function RZPS_fake_script() -- Exit.LocalScript 
+coroutine.wrap(LZLHMWY_fake_script)()
+local function PMLW_fake_script() -- Exit.LocalScript 
 	local script = Instance.new('LocalScript', Exit)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -746,8 +809,8 @@ local function RZPS_fake_script() -- Exit.LocalScript
 		script.Parent.Parent.Parent.Parent:Destroy()
 	end)
 end
-coroutine.wrap(RZPS_fake_script)()
-local function NCMTG_fake_script() -- Main.DraggableGUI 
+coroutine.wrap(PMLW_fake_script)()
+local function VROBZ_fake_script() -- Main.DraggableGUI 
 	local script = Instance.new('LocalScript', Main)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -792,21 +855,329 @@ local function NCMTG_fake_script() -- Main.DraggableGUI
 		end
 	end)
 end
-coroutine.wrap(NCMTG_fake_script)()
-local function MORCJM_fake_script() -- KattGui.Commands 
+coroutine.wrap(VROBZ_fake_script)()
+local function MABA_fake_script() -- Section1.RainbowText 
+	local script = Instance.new('LocalScript', Section1)
+
+	repeat
+		local rgb = math.random(1, 6)
+		if rgb == 1 then
+			script.Parent.TextColor3 = Color3.new(1, 0, 0)
+		elseif rgb == 2 then
+			script.Parent.TextColor3 = Color3.new(0, 1, 0)
+		elseif rgb == 3 then
+			script.Parent.TextColor3 = Color3.new(0, 0, 1)
+		elseif rgb == 4 then
+			script.Parent.TextColor3 = Color3.new(1, 1, 0)
+		elseif rgb == 5 then
+			script.Parent.TextColor3 = Color3.new(0, 1, 1)
+		elseif rgb == 6 then
+			script.Parent.TextColor3 = Color3.new(1, 0, 1)
+		elseif script.Parent.TextColor3 == Color3.new(0, 0, 0) then
+			script.Parent.TextColor3 = Color3.new(1, 0, 1)
+		end
+		wait(0.5)
+	until 1 >2
+	
+end
+coroutine.wrap(MABA_fake_script)()
+local function MEKFZJG_fake_script() -- HatSpin.RainbowText 
+	local script = Instance.new('LocalScript', HatSpin)
+
+	repeat
+		local rgb = math.random(1, 6)
+		if rgb == 1 then
+			script.Parent.TextColor3 = Color3.new(1, 0, 0)
+		elseif rgb == 2 then
+			script.Parent.TextColor3 = Color3.new(0, 1, 0)
+		elseif rgb == 3 then
+			script.Parent.TextColor3 = Color3.new(0, 0, 1)
+		elseif rgb == 4 then
+			script.Parent.TextColor3 = Color3.new(1, 1, 0)
+		elseif rgb == 5 then
+			script.Parent.TextColor3 = Color3.new(0, 1, 1)
+		elseif rgb == 6 then
+			script.Parent.TextColor3 = Color3.new(1, 0, 1)
+		elseif script.Parent.TextColor3 == Color3.new(0, 0, 0) then
+			script.Parent.TextColor3 = Color3.new(1, 0, 1)
+		end
+		wait(0.5)
+	until 1 >2
+	
+end
+coroutine.wrap(MEKFZJG_fake_script)()
+local function EMOZ_fake_script() -- HatSpin.LocalScript 
+	local script = Instance.new('LocalScript', HatSpin)
+
+	script.Parent.MouseButton1Click:Connect(function ()
+		local plr = game.Players.LocalPlayer;
+		local chr = plr.Character;
+		local hum = chr.Humanoid;
+		local mov = {};
+		local mov2 = {};
+	
+		--[[Network]]
+		coroutine.resume(coroutine.create(function()
+			settings().Physics.AllowSleep = false;
+			game.RunService.RenderStepped:Connect(function()
+				for i, v in pairs(game.Players:GetPlayers()) do
+					if v ~= plr then
+						v.MaximumSimulationRadius = 0.1;
+						v.SimulationRadius = 0;
+					else
+						v.MaximumSimulationRadius = math.pow(math.huge, math.huge);
+						v.SimulationRadius = math.pow(math.huge, 2);
+					end
+				end
+			end)
+		end))
+	
+		function ftp(str)
+			local pt = {};
+			if str ~= 'me' and str ~= 'random' then
+				for i, v in pairs(game.Players:GetPlayers()) do
+					if v.Name:lower():find(str:lower()) then
+						table.insert(pt, v);
+					end
+				end
+			elseif str == 'me' then
+				table.insert(pt, plr);
+			elseif str == 'random' then
+				table.insert(pt, game.Players:GetPlayers()[math.random(1, #game.Players:GetPlayers())]);
+			end
+			return pt;
+		end
+	
+		for _, v in pairs(hum:GetAccessories()) do
+			local b = v.Handle;
+			b.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0, 0, 0);
+			b.CanCollide = false;
+			b:BreakJoints();
+			for _, k in pairs(v:GetChildren()) do
+				if not k:IsA'SpecialMesh' and not k:IsA'Part' then
+					k:Destroy();
+				end
+			end
+			local still = Instance.new('BodyAngularVelocity', b);
+			still.MaxTorque = Vector3.new(math.huge, math.huge, math.huge);
+			still.AngularVelocity = Vector3.new(0, 0, 0);
+			local align = Instance.new('AlignPosition', b);
+			align.MaxForce = 1000000;
+			align.MaxVelocity = math.huge;
+			align.RigidityEnabled = false;
+			align.ApplyAtCenterOfMass = true;
+			align.Responsiveness = 200;
+			local a0 = Instance.new('Attachment', b);
+			local a1 = Instance.new('Attachment', chr.Head);
+			align.Attachment0 = a0;
+			align.Attachment1 = a1;
+			table.insert(mov, a1);
+			table.insert(mov2, still);
+		end
+	
+		local par = {};
+		for _, v in pairs(mov) do
+			local parr = Instance.new('Part', workspace);
+			parr.Anchored = true;
+			parr.Size = Vector3.new(1, 1, 1);
+			parr.Transparency = 1;
+			parr.CanCollide = false;
+			table.insert(par, parr);
+		end
+	
+		local rotx = 0;
+		local rotz = math.pi / 2;
+		local height = 0;
+		local heighti = 1;
+		local offset = 10;
+		local speed = 0.5;
+		local mode = 4;
+		local angular = Vector3.new(0, 0, 0);
+		local l = 1;
+		game['Run Service'].RenderStepped:Connect(function()
+			rotx = rotx + speed / 100;
+			rotz = rotz + speed / 100;
+			l = (l >= 360 and 1 or l + speed);
+	
+			for i, v in pairs(par) do
+				v.CFrame = CFrame.new(chr.HumanoidRootPart.Position) * CFrame.fromEulerAnglesXYZ(0, math.rad(l + (360 / #par) * i + speed), 0) * CFrame.new(offset, 0, 0);
+			end
+	
+			if heighti == 1 then
+				height = height + speed / 100;
+			elseif heighti == 2 then
+				height = height - speed / 100;
+			end
+			if height > 2 then
+				heighti = 2;
+			end
+			if height < -1 then
+				heighti = 1;
+			end
+	
+			if mode == 1 then
+				for _, v in pairs(mov) do
+					v.Position = Vector3.new(math.sin(rotx) * offset, 0, math.sin(rotz) * offset);
+				end
+			elseif mode == 2 then
+				for _, v in pairs(mov) do
+					v.Position = Vector3.new(offset, height, offset);
+				end
+			elseif mode == 3 then
+				for _, v in pairs(mov) do
+					v.Position = Vector3.new(math.sin(rotx) * offset, height, math.sin(rotz) * offset);
+				end
+			elseif mode == 4 then
+				for i, v in pairs(mov) do
+					v.Position = Vector3.new(chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(par[i].Position)).X, chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(par[i].Position)).Y, chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(par[i].Position)).Z);
+				end
+			elseif mode == 5 then
+				for i, v in pairs(mov) do
+					v.Position = Vector3.new((math.sin(rotx)) * offset, height, (math.cos(rotz) - i) * offset);
+				end
+			elseif mode == 6 then
+				for i, v in pairs(mov) do
+					v.Position = Vector3.new((math.sin(rotx)) * offset, height, (math.tan(rotz) - i) * offset);
+				end
+			elseif mode == 7 then
+				for i, v in pairs(mov) do
+					v.Position = Vector3.new(math.cos(rotx * i) * offset, 0, math.cos(rotz * i) * offset);
+				end
+			elseif mode == 8 then
+				for i, v in pairs(mov) do
+					v.Position = Vector3.new(math.sin(rotx) * i * offset, 0, math.sin(rotz) * i * offset);
+				end
+			elseif mode == 9 then
+				pcall(function()
+					local so = nil;
+					for k, b in pairs(chr:GetChildren()) do
+						if b:IsA'Tool' then
+							for h, j in pairs(b:GetDescendants()) do
+								if j:IsA'Sound' then
+									so = j;
+								end
+							end
+						end
+					end
+					if so ~= nil then
+						offset = so.PlaybackLoudness / 35;
+						speed = so.PlaybackLoudness / 500;
+						angular = Vector3.new(0, so.PlaybackLoudness / 75, 0);
+					end
+				end)
+				for i, v in pairs(mov) do
+					v.Position = Vector3.new(chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(par[i].Position)).X, chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(par[i].Position)).Y, chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(par[i].Position)).Z);
+				end
+			elseif mode == 10 then
+				offset = height * 15;
+				for i, v in pairs(mov) do
+					v.Position = Vector3.new(chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(par[i].Position)).X, chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(par[i].Position)).Y, chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(par[i].Position)).Z);
+				end
+			elseif mode == 11 then
+				for i, v in pairs(mov) do
+					v.Position = Vector3.new(chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(plr:GetMouse().Hit.p)).X, chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(plr:GetMouse().Hit.p)).Y, chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(plr:GetMouse().Hit.p)).Z) + Vector3.new(chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(par[i].Position)).X, chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(par[i].Position)).Y, chr.HumanoidRootPart.CFrame:ToObjectSpace(CFrame.new(par[i].Position)).Z);
+				end
+			end
+			for _, v in pairs(mov2) do
+				v.AngularVelocity = angular;
+			end
+		end)
+		game.Players.LocalPlayer.Chatted:Connect(function(c)
+			if c:split(' ')[1] == '.orbit' then
+				for _, v in pairs(mov) do
+					chr = ftp(c:split(' ')[2])[1].Character;
+					v.Parent = ftp(c:split(' ')[2])[1].Character.HumanoidRootPart;
+				end
+			end
+			if c:split(' ')[1] == '.speed' then
+				speed = tonumber(c:split(' ')[2]);
+			end
+			if c:split(' ')[1] == '.mode' then
+				mode = tonumber(c:split(' ')[2]);
+			end
+			if c:split(' ')[1] == '.offset' then
+				offset = tonumber(c:split(' ')[2]);
+			end
+			if c:split(' ')[1] == '.angular' then
+				angular = Vector3.new(tonumber(c:split(' ')[2]), tonumber(c:split(' ')[3]), tonumber(c:split(' ')[4]));
+			end
+		end)
+	end)
+end
+coroutine.wrap(EMOZ_fake_script)()
+local function SZDFWQT_fake_script() -- C00lGui.RainbowText 
+	local script = Instance.new('LocalScript', C00lGui)
+
+	repeat
+		local rgb = math.random(1, 6)
+		if rgb == 1 then
+			script.Parent.TextColor3 = Color3.new(1, 0, 0)
+		elseif rgb == 2 then
+			script.Parent.TextColor3 = Color3.new(0, 1, 0)
+		elseif rgb == 3 then
+			script.Parent.TextColor3 = Color3.new(0, 0, 1)
+		elseif rgb == 4 then
+			script.Parent.TextColor3 = Color3.new(1, 1, 0)
+		elseif rgb == 5 then
+			script.Parent.TextColor3 = Color3.new(0, 1, 1)
+		elseif rgb == 6 then
+			script.Parent.TextColor3 = Color3.new(1, 0, 1)
+		elseif script.Parent.TextColor3 == Color3.new(0, 0, 0) then
+			script.Parent.TextColor3 = Color3.new(1, 0, 1)
+		end
+		wait(0.5)
+	until 1 >2
+	
+end
+coroutine.wrap(SZDFWQT_fake_script)()
+local function MIRURP_fake_script() -- C00lGui.LocalScript 
+	local script = Instance.new('LocalScript', C00lGui)
+
+	script.Parent.MouseButton1Click:Connect(function ()
+		loadstring(game:GetObjects("rbxassetid://8127297852")[1].Source)()
+	end)
+end
+coroutine.wrap(MIRURP_fake_script)()
+local function KQBX_fake_script() -- NetLess.RainbowText 
+	local script = Instance.new('LocalScript', NetLess)
+
+	repeat
+		local rgb = math.random(1, 6)
+		if rgb == 1 then
+			script.Parent.TextColor3 = Color3.new(1, 0, 0)
+		elseif rgb == 2 then
+			script.Parent.TextColor3 = Color3.new(0, 1, 0)
+		elseif rgb == 3 then
+			script.Parent.TextColor3 = Color3.new(0, 0, 1)
+		elseif rgb == 4 then
+			script.Parent.TextColor3 = Color3.new(1, 1, 0)
+		elseif rgb == 5 then
+			script.Parent.TextColor3 = Color3.new(0, 1, 1)
+		elseif rgb == 6 then
+			script.Parent.TextColor3 = Color3.new(1, 0, 1)
+		elseif script.Parent.TextColor3 == Color3.new(0, 0, 0) then
+			script.Parent.TextColor3 = Color3.new(1, 0, 1)
+		end
+		wait(0.5)
+	until 1 >2
+	
+end
+coroutine.wrap(KQBX_fake_script)()
+local function IEZKZML_fake_script() -- NetLess.LocalScript 
+	local script = Instance.new('LocalScript', NetLess)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		function Senti_IiiiIiIiIiiIiIIiIIiIi_(a,_)if a~=nil then if _>-2+(-41)+(2)+(72)+(95)+(-91)+(30)then print("you're usin fps unlock")end if Senti_IiiiIiIiIiiIiIIiIIiIie then print("you usin synapse.congratulations(I have no idea what to say)")end if("hello")=="x68x65x6Cx6Cx6F"then print("are you usin a bad exploit?")end return true elseif a==nil then return true else return end end Senti_IiiiIiIiIiiIiIIiIIiIie=Senti_IiiiIiIiIiiIiIIiIIiIie or nil Senti_IiiiIiIiIiiIiIIiIIiIid=Senti_IiiiIiIiIiiIiIIiIIiIid or Instance.new("Script") Senti_IiiiIiIiIiiIiIIiIIiIic=game:GetService("Workspace"):GetRealPhysicsFPS() Senti_IiiiIiIiIiiIiIIiIIiIib=game:GetService("Players")['LocalPlayer'] Senti_IiiiIiIiIiiIiIIiIIiIia=Senti_IiiiIiIiIiiIiIIiIIiIi_(Senti_IiiiIiIiIiiIiIIiIIiIib,Senti_IiiiIiIiIiiIiIIiIIiIic) if(not Senti_IiiiIiIiIiiIiIIiIIiIia)==true then return pcall(function()game:GetService("TestService"):Fail("Cannot load script")end)end return xpcall(function(a,b)local c=a local _=b a,b=nil,nil table.clear(c()) local _={} local b={} b.number=(65-(20/100)+.2) local d=getmetatable(newproxy(true)) local a=getmetatable(setmetatable({},{})) spawn(function()if c()then wait() d[2](d[3](d[4]))()else return"bitch"end end) local _=function(_)local d="" local a=function(_)return(_:gsub(".",function(_)if tonumber(_)then return _ else return""end end))end for _,c in next,string.split(_,"\a")do local _=tonumber(a(c)) if _~=nil then d=d..string.char(_-b.number)elseif c then d=d..c end end return d:sub(4)end a.index=_([['{\173;\176;\162;\165;\180;\181;\179;\170;\175;\168;}']]) d={} d[1-(20/100)+.2]=c() d[2-(20/100)+.2]=d[1][a.index] d[3-(20/100)+.2]=_ d[4-(20/100)+.2]=[['{\167;\176;\179;\97;\170;\109;\183;\97;\170;\175;\97;\175;\166;\185;\181;\109;\97;\168;\162;\174;\166;\123;\136;\166;\181;\148;\166;\179;\183;\170;\164;\166;\105;\99;\145;\173;\162;\186;\166;\179;\180;\99;\106;\111;\141;\176;\164;\162;\173;\145;\173;\162;\186;\166;\179;\111;\132;\169;\162;\179;\162;\164;\181;\166;\179;\123;\136;\166;\181;\133;\166;\180;\164;\166;\175;\165;\162;\175;\181;\180;\105;\106;\97;\165;\176;\78;\75;\170;\167;\97;\183;\123;\138;\180;\130;\105;\99;\131;\162;\180;\166;\145;\162;\179;\181;\99;\106;\97;\162;\175;\165;\97;\183;\111;\143;\162;\174;\166;\97;\191;\126;\99;\137;\182;\174;\162;\175;\176;\170;\165;\147;\176;\176;\181;\145;\162;\179;\181;\99;\97;\181;\169;\166;\175;\97;\78;\75;\168;\162;\174;\166;\123;\136;\166;\181;\148;\166;\179;\183;\170;\164;\166;\105;\99;\147;\182;\175;\148;\166;\179;\183;\170;\164;\166;\99;\106;\111;\137;\166;\162;\179;\181;\163;\166;\162;\181;\123;\164;\176;\175;\175;\166;\164;\181;\105;\167;\182;\175;\164;\181;\170;\176;\175;\105;\106;\78;\75;\183;\111;\151;\166;\173;\176;\164;\170;\181;\186;\97;\126;\97;\151;\166;\164;\181;\176;\179;\116;\111;\175;\166;\184;\105;\110;\115;\118;\111;\119;\109;\113;\109;\113;\106;\78;\75;\166;\175;\165;\106;\78;\75;\168;\162;\174;\166;\123;\136;\166;\181;\148;\166;\179;\183;\170;\164;\166;\105;\99;\147;\182;\175;\148;\166;\179;\183;\170;\164;\166;\99;\106;\111;\137;\166;\162;\179;\181;\163;\166;\162;\181;\123;\164;\176;\175;\175;\166;\164;\181;\105;\167;\182;\175;\164;\181;\170;\176;\175;\105;\106;\78;\75;\184;\162;\170;\181;\105;\111;\113;\114;\106;\78;\75;\183;\111;\151;\166;\173;\176;\164;\170;\181;\186;\97;\126;\97;\151;\166;\164;\181;\176;\179;\116;\111;\175;\166;\184;\105;\113;\109;\113;\109;\113;\106;\78;\75;\166;\175;\165;\106;\78;\75;\166;\175;\165;\78;\75;\166;\175;\165;\78;\75;\78;\75;\168;\162;\174;\166;\123;\136;\166;\181;\148;\166;\179;\183;\170;\164;\166;\105;\99;\148;\181;\162;\179;\181;\166;\179;\136;\182;\170;\99;\106;\123;\148;\166;\181;\132;\176;\179;\166;\105;\99;\148;\166;\175;\165;\143;\176;\181;\170;\167;\170;\164;\162;\181;\170;\176;\175;\99;\109;\97;\188;\97;\78;\75;\149;\170;\181;\173;\166;\97;\126;\97;\99;\143;\176;\181;\170;\167;\170;\164;\162;\181;\170;\176;\175;\99;\124;\78;\75;\149;\166;\185;\181;\97;\126;\97;\99;\143;\166;\181;\173;\166;\180;\180;\97;\162;\164;\181;\170;\183;\162;\181;\166;\165;\157;\175;\132;\179;\166;\162;\181;\166;\165;\97;\163;\186;\97;\142;\170;\130;\170;\137;\180;\138;\180;\114;\115;\115;\119;\99;\124;\78;\75;\138;\164;\176;\175;\97;\126;\97;\99;\179;\163;\185;\181;\169;\182;\174;\163;\123;\112;\112;\181;\186;\177;\166;\126;\130;\180;\180;\166;\181;\103;\170;\165;\126;\118;\114;\113;\120;\114;\121;\115;\114;\114;\117;\103;\184;\126;\114;\118;\113;\103;\169;\126;\114;\118;\113;\99;\124;\78;\75;\133;\182;\179;\162;\181;\170;\176;\175;\97;\126;\97;\114;\119;\124;\190;\106;\78;\75;}']]end,function(_)game:GetService("TestService"):Fail("\n"..(script or Instance.new('Script')):GetFullName().." has occurred an error:".._)end,getfenv,setfenv)
+	end)
+end
+coroutine.wrap(IEZKZML_fake_script)()
+local function KFJQ_fake_script() -- KattGui.Commands 
 	local script = Instance.new('LocalScript', KattGui)
 
 	local Plr1 = game.Players.LocalPlayer
 	local plr = game.Players.LocalPlayer
 	local char = plr.Character
 	local hum = char:WaitForChild("Humanoid")
-	local admin
-	game.Players.PlayerAdded:Connect(function(Player)
-		if Player.Name == "Thekattgod" then
-			admin = Player
-		end
-	end)
-	local qwerty = false
 	Plr1.Chatted:Connect(function(chatt)
 		if chatt:split(' ')[1] == "-print" then
 			print(tostring(chatt:split(' ')[2]))
@@ -826,32 +1197,17 @@ local function MORCJM_fake_script() -- KattGui.Commands
 			script.Parent.Cmds.Visible = true
 		end
 	end)
-	admin.Chatted:Connect(function(cht)
-		if cht:split(' ')[1] == "-0902" then
-			
-			qwerty = true
-			print("qwerty = ".. qwerty)
-		end
-		if qwerty == true then
-			if cht:split(' ') == "-kick" then
-				local plyr = game.Players:getChildren()
-				if plyr == cht:split(' ')[2] then
-					plyr:Kick()
-				end
-			end
-		end
-	end)
 end
-coroutine.wrap(MORCJM_fake_script)()
-local function VGDWYV_fake_script() -- Close.LocalScript 
+coroutine.wrap(KFJQ_fake_script)()
+local function YOLCWE_fake_script() -- Close.LocalScript 
 	local script = Instance.new('LocalScript', Close)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(VGDWYV_fake_script)()
-local function GKBXYU_fake_script() -- Cmds.DraggableGUI 
+coroutine.wrap(YOLCWE_fake_script)()
+local function PUWVA_fake_script() -- Cmds.DraggableGUI 
 	local script = Instance.new('LocalScript', Cmds)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -896,4 +1252,4 @@ local function GKBXYU_fake_script() -- Cmds.DraggableGUI
 		end
 	end)
 end
-coroutine.wrap(GKBXYU_fake_script)()
+coroutine.wrap(PUWVA_fake_script)() 
